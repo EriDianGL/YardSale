@@ -20,11 +20,38 @@ body {
   grid-template-rows: auto 1fr auto;
   width: 300px;
 }
-.form {
-  display: flex;
-  flex-direction: column;
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    240px
+  ); /* repeat (2 1fr) es lo mismo que 1fr 1fr*/
 }
-.form div {
+.product-card {
+  width: 240px;
+}
+.product-card img {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.product-info figure img {
+  width: 35px;
+  height: 35px;
+}
+
+.product-info figure {
+  margin: 0;
+}
+
+.form {
   display: flex;
   flex-direction: column;
 }
@@ -66,6 +93,12 @@ body {
   padding: 4px;
   margin-bottom: 22px;
 }
+.value {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+  margin: 8px 0 32px 0;
+}
+
 .primary-button {
   background-color: var(--hospital-green);
   border-radius: 8px;
